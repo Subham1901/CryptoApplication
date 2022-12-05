@@ -49,7 +49,7 @@ export default function Coindetail() {
           setLoader(false);
           setCoindata(null);
           toast({
-            description: error.message,
+            description: 'Data Not Found!',
             status: 'error',
           });
         }
