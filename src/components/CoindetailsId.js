@@ -1,20 +1,18 @@
 import {
   Avatar,
-  Box,
   Center,
   Container,
   Heading,
   HStack,
-  Image,
   Text,
   VStack,
   Stat,
   StatLabel,
-  StatNumber,
   StatHelpText,
   StatArrow,
   StatGroup,
   Spinner,
+  Divider,
 } from '@chakra-ui/react';
 import React, { useContext } from 'react';
 import { setDetails } from './ContextAPI/DetailContext';
@@ -73,6 +71,7 @@ function CoindetailsId(props) {
                 )}
               </Text>
             </HStack>
+            <Divider />
             <HStack display={'flex'} justifyContent="space-between">
               <Heading fontSize={'lg'}> All Time High</Heading>
               <Text>
@@ -82,6 +81,7 @@ function CoindetailsId(props) {
                 {}
               </Text>
             </HStack>
+            <Divider />
             <HStack display={'flex'} justifyContent="space-between">
               <Heading fontSize={'lg'}> Market Cap</Heading>
               <Text>
@@ -94,26 +94,29 @@ function CoindetailsId(props) {
                 {}
               </Text>
             </HStack>
-
+            <Divider />
             <HStack display={'flex'} justifyContent="space-between">
               <Heading fontSize={'lg'}>Total Volume</Heading>
               <Text>{props.marketData.total_volume[currency]}</Text>
             </HStack>
+            <Divider />
             <HStack display={'flex'} justifyContent="space-between">
               <Heading fontSize={'lg'}>Total Supply</Heading>
               <Text>{props.marketData.total_supply}</Text>
             </HStack>
-
+            <Divider />
             <HStack display={'flex'} justifyContent="space-between">
               <Heading fontSize={'lg'}>Circulating Supply</Heading>
               <Text>{props.marketData.circulating_supply}</Text>
             </HStack>
+            <Divider />
             <HStack display={'flex'} justifyContent="space-between">
               <Heading fontSize={'lg'}>Last updated</Heading>
               <Text>
                 {props.marketData.last_updated} {}
               </Text>
             </HStack>
+            <Divider />
             <HStack display={'flex'} justifyContent="space-between">
               <Heading fontSize={'lg'}>Price Change</Heading>
               <StatGroup>
@@ -136,6 +139,7 @@ function CoindetailsId(props) {
                 </Stat>
               </StatGroup>
             </HStack>
+
             {/* //! price change percentage */}
             <HStack display={'flex'} justifyContent="center">
               <StatGroup>

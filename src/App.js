@@ -5,6 +5,7 @@ import Home from './components/Home';
 import NavBar from './components/navbar/NavBar';
 import CoinId from './components/CoinId';
 import { setDetails } from './components/ContextAPI/DetailContext';
+import Error from './components/Error';
 
 function App() {
   const [currency, setCurrency] = useState('');
@@ -20,6 +21,7 @@ function App() {
           <Route path="/coins" element={<Coindetail />} exact />
           <Route path="/" element={<Home />} exact />
           <Route path="/:id" element={<CoinId />} exact />
+          <Route path="*" element={<Error />} exact />
         </Routes>
       </setDetails.Provider>
     </Router>

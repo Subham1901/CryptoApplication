@@ -1,6 +1,5 @@
 import {
   Avatar,
-  Box,
   Container,
   HStack,
   Text,
@@ -8,14 +7,11 @@ import {
   Spinner,
   useToast,
   Select,
-  useDisclosure,
-  Stack,
   Center,
 } from '@chakra-ui/react';
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
 import data from 'currency-codes/data';
-import getSymbolFromCurrency from 'currency-symbol-map';
 import currenyFormatter from 'currency-formatter';
 import { setDetails } from './ContextAPI/DetailContext';
 import { Link } from 'react-router-dom';
